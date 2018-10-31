@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+	<test thread-count="5" name="Test">
+		<classes>
+			<class name="tesgNGTestCases.SecondDemo">
+				<methods>
+					<include name="dample"></include>
+				</methods>
+			</class>
+			<class name="tesgNGTestCases.FirstDemo" />
+			<class name="com.oct.project.testcases.Hello"></class>
+		</classes>
+	</test> <!-- Test -->
+</suite> <!-- Suite -->

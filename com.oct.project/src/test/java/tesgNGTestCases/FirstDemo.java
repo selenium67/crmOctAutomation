@@ -8,7 +8,7 @@ public class FirstDemo {
   @Test
   public void f() {
 	  
-	  System.out.println("TestNG");
+	  System.out.println("TevstNG");
 	  
   }
   

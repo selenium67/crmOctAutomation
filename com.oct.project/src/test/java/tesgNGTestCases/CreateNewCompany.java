@@ -10,13 +10,43 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
+import org.testng.annotations.AfterSuite;
+import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.BeforeSuite;
+import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 public class CreateNewCompany {
 
 	WebDriver driver = null;
+	
+	@BeforeSuite
+	public void queOne() {
+		
+		System.out.println("This Method will execute first @beforeSuite");
+	}
+	
+	@BeforeTest
+	public void queTwo() {
+		
+		System.out.println("This Method will execute Second @BeforeTest");
+	}
+	
+	
+	@AfterSuite
+	public void last() {
+		
+		System.out.println("This Method will execute last");
+	}
+	
+	
+	@AfterTest
+	public void aTest() {
+		
+		System.out.println("This Method will execute before @AfterClass i.e @AfterTest");
+	}
 	
 	@BeforeClass
 	public void initBrowser() {

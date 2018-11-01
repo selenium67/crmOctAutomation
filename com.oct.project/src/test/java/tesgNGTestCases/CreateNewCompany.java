@@ -26,6 +26,7 @@ public class CreateNewCompany {
 	public void queOne() {
 		
 		System.out.println("This Method will execute first @beforeSuite");
+		System.out.println();
 	}
 	
 	@BeforeTest

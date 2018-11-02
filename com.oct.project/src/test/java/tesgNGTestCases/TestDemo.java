@@ -9,6 +9,6 @@ public class TestDemo {
 	public void hello()
 	{
 	
-	System.out.println("");
+	System.out.println("pull request sucess");
 	}
 }

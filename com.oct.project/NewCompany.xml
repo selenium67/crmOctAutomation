@@ -2,8 +2,11 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Suite">
   <test thread-count="5" name="Test">
+  <parameter name="selectBrowser" value="chrome"></parameter>
+  <parameter name="userName" value="jagadeesh232708"></parameter>
+  <parameter name="pass" value="jagadeeshjaggu"></parameter>
     <classes>
-      <class name="tesgNGTestCases.CreateNewCompany"/>
+      <class name="tesgNGTestCases.Parameters"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

@@ -46,6 +46,12 @@ public void Docs () throws Exception{
 	driver.findElement(By.xpath("//input[@id='title']")).sendKeys("New Document testing");
 	driver.findElement(By.xpath("//textarea[@name='description']")).sendKeys("text message : Starting ChromeDriver 2.41.578737 (49da6702b16031c40d63e5618de03a32ff6c197e) on port 32507");
 	driver.findElement(By.xpath("//input[@id='version']")).sendKeys("v1.0.1");
+	driver.findElement(By.xpath("//input[@type='file']")).click();
+	
+	//autoit .exe file execution it is a java command
+	
+	Runtime.getRuntime().exec("C:\\Users\\HP\\Desktop\\Selenium software files\\autoit\\Docs.exe");
+	
 	driver.findElement(By.xpath("//form[@id='docForm']/table/tbody/tr[14]/td[2]/input")).click();
 	
 		

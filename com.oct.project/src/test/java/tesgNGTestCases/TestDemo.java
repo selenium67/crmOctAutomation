@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 package tesgNGTestCases;
 
 import java.util.concurrent.TimeUnit;
@@ -38,3 +39,19 @@ public class TestDemo {
 	
 	}
 }
+=======
+package tesgNGTestCases;
+
+import org.testng.annotations.Test;
+
+public class TestDemo {
+
+	@Test
+	
+	public void hello()
+	{
+	
+	System.out.println("pull request sucess");
+	}
+}
+>>>>>>> branch 'master' of https://github.com/selenium67/crmOctAutomation.git

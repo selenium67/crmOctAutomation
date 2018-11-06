@@ -16,6 +16,7 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 public class CreateNewCompany {
@@ -56,10 +57,11 @@ public class CreateNewCompany {
 	}
 	
 	@BeforeMethod
-	public void init() throws Exception {
+	@Parameters({"user","pass"})
+	public void init(String userName, String passWord) throws Exception {
 			
 		openUrl();
-		login();		
+		login(userName,passWord);		
 	}
 	
 	@Test(priority=0,description = "Creating a New Company in FRM Which is available in Companies Menu")
@@ -103,15 +105,16 @@ public class CreateNewCompany {
 		driver.get("https://www.freecrm.com/index.html?e=2");
 	}
 
-	public void login() throws Exception {
+	
+	public void login(String user,String pass) throws Exception {
 
 		WebElement username = driver.findElement(By.xpath("//input[@placeholder='Username']"));
 		WebElement password = driver.findElement(By.xpath("//input[@name='password']"));
 		WebElement login = driver.findElement(By.xpath("//input[@value='Login']"));
 		username.clear();
-		username.sendKeys("jagadeesh232708");
+		username.sendKeys(user);
 		password.clear();
-		password.sendKeys("jagadeeshjaggu");
+		password.sendKeys(pass);
 		Thread.sleep(3000);
 		login.click();
 	}

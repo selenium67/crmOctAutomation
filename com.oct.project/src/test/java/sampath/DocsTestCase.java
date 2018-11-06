@@ -48,7 +48,7 @@ public void Docs () throws Exception{
 	driver.findElement(By.xpath("//input[@id='version']")).sendKeys("v1.0.1");
 	driver.findElement(By.xpath("//input[@type='file']")).click();
 	
-	//.exe file execution it is a java command
+	//(.exe file build using autoit )is execution it is purely a java command
 	
 	Runtime.getRuntime().exec("C:\\Users\\HP\\Desktop\\Selenium software files\\autoit\\Docs.exe");
 	

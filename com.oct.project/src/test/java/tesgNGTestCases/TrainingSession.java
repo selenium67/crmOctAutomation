@@ -14,29 +14,25 @@ WebDriver driver =null;
 	
 	
 	@Test()	
-	public void OpenBrowser () throws Exception {
+	public void OpenBrowser() throws Exception {
 		
-		System.setProperty("webdriver.chrome.driver", "C:\\\\Users\\\\HP\\\\Desktop\\\\downloads\\\\chromedriver_win32\\\\chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver", "./lib/chromedriverwin/chromedriver.exe");
 		driver = new ChromeDriver();
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-		driver.get("https://github.com/");
-		
-		NewUserRegistration();
-		
+		driver.get("https://github.com/");		
 	}
-
+	
+	@Test(dependsOnMethods="OpenBrowser")
 	private void NewUserRegistration() throws Exception {
-		// TODO Auto-generated method stub
 		
-		driver.findElement(By.xpath("//header[@role='banner']/div/div[2]/div/span/div/a[2]")).click();
+		driver.findElement(By.xpath("//header[@role='banner']/div/div[2]/div/span/div")).click();
 		driver.findElement(By.xpath("//input[@id='user_login']")).sendKeys("kancham27");
 		driver.findElement(By.xpath("//input[@id='user_email']")).sendKeys("kk0227sampath@gmail.com");
 		driver.findElement(By.xpath("//input[@id='user_password']")).sendKeys("lkjhgfdsamnbvcxz@123");
 		
 		Thread.sleep(5000);
-		driver.findElement(By.xpath("//button[@id='signup_button']")).click();
-		
+		driver.findElement(By.xpath("//button[@id='signup_button']")).click();		
 	}
 
 

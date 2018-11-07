@@ -1,5 +1,6 @@
 package sampath;
 
+import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
@@ -15,8 +16,9 @@ public class DocsTestCase {
 	
 	
 	@Test 
-	
-public void Docs () throws Exception{
+
+		
+		public void FreeCRMLogin() {
 		
 		System.setProperty("webdriver.chrome.driver", "C:\\\\Users\\\\HP\\\\Desktop\\\\downloads\\\\chromedriver_win32\\\\chromedriver.exe");
 		driver = new ChromeDriver();
@@ -31,13 +33,16 @@ public void Docs () throws Exception{
 		Password.sendKeys("123456");
 		WebElement login = driver.findElement(By.xpath("//input[@value ='Login']"));
 		login.click();
+		}
+	@Test	
+	
+		public void SwitchToFrame() throws Exception {
 		
-		Thread.sleep(3000);
+			Thread.sleep(3000);
 		
 		driver.switchTo().frame(driver.findElement(By.xpath("//frame[@name='mainpanel']")));
-		
-		
-
+			
+ 
 		WebElement doc = driver.findElement(By.xpath("//a[@title='Docs']"));
 		Actions a = new Actions(driver);
 		a.moveToElement(doc).perform();
@@ -51,14 +56,18 @@ public void Docs () throws Exception{
 	//(.exe file build using autoit )is execution it is purely a java command
 	
 	Runtime.getRuntime().exec("C:\\Users\\HP\\Desktop\\Selenium software files\\autoit\\Docs.exe");
+
 	
 	driver.findElement(By.xpath("//form[@id='docForm']/table/tbody/tr[14]/td[2]/input")).click();
 	
 		
-				
+}	
+}
 				
 				
 
-}
-}
+
+
+
+
 

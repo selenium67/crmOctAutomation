@@ -138,6 +138,7 @@ public class CustomViews {
 		driver.findElement(By.xpath("//form[@name='viewGenForm']/table/tbody/tr[4]/td/input")).click();
 
 	}
-
 }
->>>>>>> branch 'master' of https://github.com/selenium67/crmOctAutomation.git
+
+
+

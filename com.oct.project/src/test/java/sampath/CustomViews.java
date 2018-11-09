@@ -15,9 +15,8 @@ public class CustomViews {
 	
 	WebDriver driver;
 	
-	@Test 
-
 	
+	@Test 
 	public void FreeCRMLogin() throws Exception {
 	
 	System.setProperty("webdriver.chrome.driver", "C:\\\\Users\\\\HP\\\\Desktop\\\\downloads\\\\chromedriver_win32\\\\chromedriver.exe");
@@ -59,5 +58,6 @@ public class CustomViews {
 	driver.findElement(By.xpath("//input[@value=' - ADD ->']")).click();
 
 }
+		
 		
 	}

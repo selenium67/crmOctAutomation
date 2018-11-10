@@ -25,22 +25,23 @@ public class CustomViews {
 			FileInputStream fin = new FileInputStream(src);
 			prop = new Properties();
 			prop.load(fin);
-			
 		} catch (Exception e) {
 			e.printStackTrace();		
 	}
 		return prop;
 	
-	}	
-	WebDriver driver;
+	}
+	
+	public WebDriver driver;
 
-	@Test
+	//@Test
 	public void FreeCRMLogin() throws Exception {
 
 		/*
 		 * Path of the File Read the File Create an for Properties Load the file into
 		 * properties
 		 */
+		
 
 		System.setProperty(getRepositoryData().getProperty("CHROMEKEY"), getRepositoryData().getProperty("CHROMEVALUE"));
 		driver = new ChromeDriver();
